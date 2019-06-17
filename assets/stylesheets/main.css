@@ -1,0 +1,371 @@
+/*
+========================================
+Reset
+========================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+:root {
+    font-size: 1em;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*
+========================================
+Body style
+========================================
+*/
+
+body {
+    color: black;
+    font-size: 1rem;
+    font-kerning: normal;
+    font-weight: 400;
+    background-color: #2d3436;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    margin: 0 4vw;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin: 1.5rem 0 0 0;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p + p {
+    margin-top: 1rem;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/*
+========================================
+Home style
+========================================
+*/
+
+#home {
+    height: 100vh;
+    width: 100%;
+}
+
+header nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: 2em;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 4vw;
+}
+
+header nav ul li {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    color: #000;
+    transition: all 0.2s ease;
+}
+
+header nav ul li a {
+    color: #000;
+}
+
+header nav ul li:nth-of-type(2) {
+    margin-left: auto;
+}
+
+header nav ul li:last-of-type {
+    margin-right: auto;
+}
+
+header nav ul li + li {
+    margin-left: 2em;
+}
+
+.section-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.section-hero div:last-of-type {
+    display: flex;
+    justify-content: center;
+}
+
+.section-hero div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.section-hero img {
+    height: 80%;
+}
+
+.section-hero svg {
+    width: 80%;
+}
+
+#home h4 {
+    position: relative;
+    bottom: 2em;
+    text-align: center;
+    margin: auto;
+}
+
+/*
+========================================
+Filter style
+========================================
+*/
+
+.filter-container {
+    background-color: antiquewhite; 
+    margin-bottom: 2rem;
+}
+
+.filter-container h2 {
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.filter-container nav ul:last-of-type form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.filter-container nav ul:last-of-type li + li {
+    margin-left: 1em;
+}
+
+.filter-container nav ul input[type="checkbox"] {
+    display: none;
+    z-index: 0;
+    opacity: 0;
+}
+
+.filter-container nav ul:last-of-type label {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+/*
+========================================
+Foto's style
+========================================
+*/
+
+input[type="checkbox"] + label {
+    color: #ff3f34;
+    font-weight: 900;
+    background-color: rgba(255, 63, 52, 0.5);
+    box-shadow: inset 0 0em 0 0 #ff3f34;
+}
+
+input[type="checkbox"]:hover + label,
+input[type="checkbox"]:checked + label {
+    color: #fff;
+    background-color: rgba(255, 63, 52, 1);
+    box-shadow: inset 0 -3em 0 0 #ff3f34;
+}
+
+.transition {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*
+========================================
+Foto's style
+========================================
+*/
+
+.flex-container {
+    max-width: 90rem;
+    font-size: 0;
+}
+
+.flex-container article {
+    position: relative;
+    float: left;
+    width: 100%;
+    opacity: 1;
+    height: 18rem;
+    margin: 0.5%;
+    transition: all 0.5s;
+}
+
+main .flex-container .show {
+    height: 18rem;
+    opacity: 1;
+    padding: 0;
+    margin: 0.5%;
+}
+
+.flex-container .hide {
+    height: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+@media (min-width: 620px) {
+    .flex-container article {
+        width: 49%;
+    }
+}
+
+@media (min-width: 840px) {
+    .flex-container article {
+        width: 32%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .flex-container article {
+        width: 24%;
+    }
+}
+
+.flex-container article img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.flex-container article div {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    z-index: 100;
+    width: 1.2rem;
+    height: 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 60%, 0 100%);
+    transition: all 0.5s ease;
+}
+
+.flex-container article:hover div {
+    width: 1.5rem;
+    height: 2.5rem;
+}
+
+/*
+========================================
+Footer style
+========================================
+*/
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body > footer {
+    background-color: #1e272e;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    color: #ecf0f1;
+}
+
+
+
+
+
